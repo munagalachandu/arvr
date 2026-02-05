@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A-Frame Hover & Click Reset</title>
+  <script src="aframe.min.js"></script>
+ 
+</head>
+
+<body>
+  <a-scene>
+
+    <!-- Camera -->
+    <a-camera position="0 1.6 4"
+              cursor="rayOrigin: mouse"
+              raycaster="objects: .interactive">
+    </a-camera>
+
+    <!-- Lights -->
+    <a-light type="directional" position="1 2 1" intensity="0.9"></a-light>
+    <a-light type="ambient" intensity="0.6"></a-light>
+
+  <!-- Left -->
+<a-torus-knot class="interactive"
+position="-2 1.2 -3"
+radius="0.45"
+radius-tubular="0.15"
+material="color: #FF0000">
+</a-torus-knot>
+
+<!-- Center -->
+<a-octahedron class="interactive"
+position="0 1.2 0"
+radius="0.6"
+material="color: #38BDF8; emissive: #0b2a3a; metalness: 0.35; roughness: 0.25">
+</a-octahedron>
+
+<!-- Right -->
+<a-torus class="interactive"
+position="2 1.2 -3"
+radius="0.6"
+radius-tubular="0.22"
+material="color: #FFD700">
+</a-torus>
+
+
+    <!-- Ground -->
+    <a-plane position="0 0 -4"
+             rotation="-90 0 0"
+             width="10"
+             height="10"
+             material="color: #7BC8A4">
+    </a-plane>
+
+  </a-scene>
+</body>
+</html>
